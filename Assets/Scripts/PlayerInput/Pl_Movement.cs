@@ -24,13 +24,13 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
     ""name"": ""Pl_Movement"",
     ""maps"": [
         {
-            ""name"": ""PlayerControl"",
-            ""id"": ""108ffc86-df77-44ea-a76a-5f9969bd6e3a"",
+            ""name"": ""PlayerControls"",
+            ""id"": ""9de59528-9712-4f00-9958-3af3cd891876"",
             ""actions"": [
                 {
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
-                    ""id"": ""8a3c10d0-0e36-4c08-bd9c-dd188d1f1542"",
+                    ""id"": ""8a98d680-fa4b-4c40-9640-ae0ec627a2f2"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,7 +39,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""8bd85fb9-b2b1-4b9c-9a62-2aaedaa32b21"",
+                    ""id"": ""2cc9a81c-0990-432a-9a3a-fb7823fc05ba"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,7 +48,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Run"",
                     ""type"": ""Button"",
-                    ""id"": ""c03eaa91-f91a-4a89-b57e-4acab4dfeb4a"",
+                    ""id"": ""e2e7d22c-1bcc-4fe0-a12f-b4478e7fe57a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -57,7 +57,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Mouse"",
                     ""type"": ""Value"",
-                    ""id"": ""a79855ae-c81c-4f22-a8ff-77c333995465"",
+                    ""id"": ""9c6fb87e-72b7-4065-97b9-4e04941126f4"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -66,7 +66,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Crouch"",
                     ""type"": ""Button"",
-                    ""id"": ""e6a9dc87-fbbb-488f-bf41-d8813b75f8c7"",
+                    ""id"": ""2926a504-3eb3-4a9c-9079-a91b0b4f44c5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -76,7 +76,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""ff1da03a-5af2-494a-a1e5-3dab3e756ff8"",
+                    ""id"": ""e327fbad-a03b-41c8-bb55-1c413ea8be75"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -87,7 +87,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""713c590f-fe93-4e96-99a8-1948d499dcdc"",
+                    ""id"": ""d95c2a99-5cf5-4a93-9117-00c45e94a54d"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -98,7 +98,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""ea722403-f7d7-4116-ac03-cf41cfc5bb3a"",
+                    ""id"": ""24e4b3b3-26cf-44f6-867c-aa66eebbb713"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -109,7 +109,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""be485705-696b-4188-a1b8-4384ca7de5aa"",
+                    ""id"": ""ec009eeb-777b-4f00-bb99-3d81811cc00a"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -120,7 +120,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""32830d41-ea49-48ad-9292-17ebc0e6c437"",
+                    ""id"": ""820b6674-eb39-4fd1-b572-bed62cbf3b8b"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -131,7 +131,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f4f0e99f-b9fc-494a-92e7-d58d79f1b0ba"",
+                    ""id"": ""4b1259d2-055e-47dd-88a9-aa791cffe0d5"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -142,7 +142,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f4dd34d5-3214-4986-81d4-0cd56df6d751"",
+                    ""id"": ""42ebdba4-9542-453a-81c0-a650d3d1f905"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -153,7 +153,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6748a5c7-b2d5-4e97-ba9c-7b08ed84760f"",
+                    ""id"": ""a87ce533-4704-4a6a-b7b9-a456529ce9b2"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -164,7 +164,7 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a9667c60-2582-4ab3-bb22-36a0c055f979"",
+                    ""id"": ""8dc0e78b-afbe-4dfe-b4fe-2bf8493480b7"",
                     ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -178,13 +178,13 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // PlayerControl
-        m_PlayerControl = asset.FindActionMap("PlayerControl", throwIfNotFound: true);
-        m_PlayerControl_Movement = m_PlayerControl.FindAction("Movement", throwIfNotFound: true);
-        m_PlayerControl_Jump = m_PlayerControl.FindAction("Jump", throwIfNotFound: true);
-        m_PlayerControl_Run = m_PlayerControl.FindAction("Run", throwIfNotFound: true);
-        m_PlayerControl_Mouse = m_PlayerControl.FindAction("Mouse", throwIfNotFound: true);
-        m_PlayerControl_Crouch = m_PlayerControl.FindAction("Crouch", throwIfNotFound: true);
+        // PlayerControls
+        m_PlayerControls = asset.FindActionMap("PlayerControls", throwIfNotFound: true);
+        m_PlayerControls_Movement = m_PlayerControls.FindAction("Movement", throwIfNotFound: true);
+        m_PlayerControls_Jump = m_PlayerControls.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerControls_Run = m_PlayerControls.FindAction("Run", throwIfNotFound: true);
+        m_PlayerControls_Mouse = m_PlayerControls.FindAction("Mouse", throwIfNotFound: true);
+        m_PlayerControls_Crouch = m_PlayerControls.FindAction("Crouch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -241,49 +241,49 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // PlayerControl
-    private readonly InputActionMap m_PlayerControl;
-    private IPlayerControlActions m_PlayerControlActionsCallbackInterface;
-    private readonly InputAction m_PlayerControl_Movement;
-    private readonly InputAction m_PlayerControl_Jump;
-    private readonly InputAction m_PlayerControl_Run;
-    private readonly InputAction m_PlayerControl_Mouse;
-    private readonly InputAction m_PlayerControl_Crouch;
-    public struct PlayerControlActions
+    // PlayerControls
+    private readonly InputActionMap m_PlayerControls;
+    private IPlayerControlsActions m_PlayerControlsActionsCallbackInterface;
+    private readonly InputAction m_PlayerControls_Movement;
+    private readonly InputAction m_PlayerControls_Jump;
+    private readonly InputAction m_PlayerControls_Run;
+    private readonly InputAction m_PlayerControls_Mouse;
+    private readonly InputAction m_PlayerControls_Crouch;
+    public struct PlayerControlsActions
     {
         private @Pl_Movement m_Wrapper;
-        public PlayerControlActions(@Pl_Movement wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PlayerControl_Movement;
-        public InputAction @Jump => m_Wrapper.m_PlayerControl_Jump;
-        public InputAction @Run => m_Wrapper.m_PlayerControl_Run;
-        public InputAction @Mouse => m_Wrapper.m_PlayerControl_Mouse;
-        public InputAction @Crouch => m_Wrapper.m_PlayerControl_Crouch;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerControl; }
+        public PlayerControlsActions(@Pl_Movement wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_PlayerControls_Movement;
+        public InputAction @Jump => m_Wrapper.m_PlayerControls_Jump;
+        public InputAction @Run => m_Wrapper.m_PlayerControls_Run;
+        public InputAction @Mouse => m_Wrapper.m_PlayerControls_Mouse;
+        public InputAction @Crouch => m_Wrapper.m_PlayerControls_Crouch;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerControlActions set) { return set.Get(); }
-        public void SetCallbacks(IPlayerControlActions instance)
+        public static implicit operator InputActionMap(PlayerControlsActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerControlsActions instance)
         {
-            if (m_Wrapper.m_PlayerControlActionsCallbackInterface != null)
+            if (m_Wrapper.m_PlayerControlsActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMovement;
-                @Jump.started -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnJump;
-                @Run.started -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnRun;
-                @Mouse.started -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMouse;
-                @Mouse.performed -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMouse;
-                @Mouse.canceled -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnMouse;
-                @Crouch.started -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnCrouch;
-                @Crouch.performed -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnCrouch;
-                @Crouch.canceled -= m_Wrapper.m_PlayerControlActionsCallbackInterface.OnCrouch;
+                @Movement.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
+                @Jump.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
+                @Run.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRun;
+                @Mouse.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMouse;
+                @Mouse.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMouse;
+                @Mouse.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMouse;
+                @Crouch.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCrouch;
+                @Crouch.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCrouch;
+                @Crouch.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCrouch;
             }
-            m_Wrapper.m_PlayerControlActionsCallbackInterface = instance;
+            m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Movement.started += instance.OnMovement;
@@ -304,8 +304,8 @@ public partial class @Pl_Movement : IInputActionCollection2, IDisposable
             }
         }
     }
-    public PlayerControlActions @PlayerControl => new PlayerControlActions(this);
-    public interface IPlayerControlActions
+    public PlayerControlsActions @PlayerControls => new PlayerControlsActions(this);
+    public interface IPlayerControlsActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);

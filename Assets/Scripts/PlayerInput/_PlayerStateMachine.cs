@@ -5,17 +5,40 @@ using UnityEngine;
 
 public class _PlayerStateMachine : MonoBehaviour
 {
-    #region Properties
+    #region ControlsSettingProperties
 
     #endregion
 
-    PlayerInput playerInput;
-    Animator animator;
-    CharacterController characterController;
+    #region ControlsSettings
 
-    void Start()
+    Pl_Movement _playerInput;
+    Animator _animator;
+    CharacterController _characterController;
+
+    [Header("Movement")]
+    [SerializeField] private float _walkSpeed = 4f;
+    [SerializeField] private float _sprintSpeed = 6f;
+    [SerializeField] private float _strafeSpeed = 6f;
+
+    [Header("Crouch")]
+    [SerializeField] private float _crouchHeight = 0.4f;
+
+    #endregion
+
+    private void OnEnable()
     {
+        _playerInput.PlayerControls.Enable();
+        _animator = GetComponent<Animator>();
+        _characterController = GetComponent<CharacterController>();
+    }
 
+    private void OnDisable()
+    {
+        _playerInput.PlayerControls.Disable();
+    }
+    void Awake()
+    {
+        _playerInput = new Pl_Movement();
     }
 
 
