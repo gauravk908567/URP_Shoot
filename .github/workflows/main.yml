@@ -1,8 +1,8 @@
-#name: Build project
+# name: Build project
 
-#on: [push]
+# on: [push]
 
-#jobs:
+# jobs:
  # buildForAllSupportedPlatforms:
   #  name: Build for ${{ matrix.targetPlatform }}
    # runs-on: ubuntu-latest
