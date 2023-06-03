@@ -41,7 +41,13 @@ public class IdleState : PlayerBaseState
 
     public override void UpdateState()
     {
-
+        SlideCheck();
         CheckSwitchState();
+    }
+
+    void SlideCheck()
+    {
+        if (Ctx.isSliding)
+            Ctx.MoveDirection += new Vector3(Ctx.HitPointNormal.x, -Ctx.HitPointNormal.y, Ctx.HitPointNormal.z) * Ctx.SlopeSlideSpeed;
     }
 }

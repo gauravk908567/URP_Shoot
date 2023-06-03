@@ -53,6 +53,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float StrafeSpeed { get => _strafeSpeed; set => _strafeSpeed = value; }
     public float CrouchSpeed { get => _crouchSpeed; set => _crouchSpeed = value; }
     public float CrouchStrafeSpeed { get => _crouchStrafeSpeed; set => _crouchStrafeSpeed = value; }
+    public float SlopeSlideSpeed { get => _slopeSlideSpeed; set => _slopeSlideSpeed = value; }
 
     //crouch Parameters
     public float CrouchHeight { get => _crouchHeight; set => _crouchHeight = value; }
@@ -63,9 +64,26 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsCrouching { get => _isCrouching; set => _isCrouching = value; }
     public bool IsCrouchingAnimation { get => _isCrouchingAnimation; set => _isCrouchingAnimation = value; }
     public bool shouldCrouch => _isCrouchPressed && !_isCrouchingAnimation && _characterController.isGrounded;
-
-
     public float SmoothTime { get => _smoothTime; set => _smoothTime = value; }
+
+    //Sliding parameters
+    public Vector3 HitPointNormal { get => _hitPointNormal; set => _hitPointNormal = value; }
+    public bool isSliding
+    {
+        get
+        {
+            Debug.DrawRay(transform.position, Vector3.down, Color.red); //Was used to check lenght of player from current transform position to ground
+            if (_characterController.isGrounded && Physics.Raycast(transform.position, Vector3.down, out RaycastHit SlopeHit, 1.5f))
+            {
+                _hitPointNormal = SlopeHit.normal;
+                return Vector3.Angle(_hitPointNormal, Vector3.up) > _characterController.slopeLimit;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 
     #endregion
 
@@ -84,6 +102,7 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private float _strafeSpeed = 4f;
     [SerializeField] private float _crouchStrafeSpeed = 4f;
     [SerializeField] private float _crouchSpeed = 2f;
+    [SerializeField] private float _slopeSlideSpeed = 8f;
 
     [Header("Mouse Settings")]
     [SerializeField] private Camera _playerCamera;
@@ -105,6 +124,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     [Header("Gravity Settings")]
     [SerializeField] float _gravity = -9.8f;
+
+    [Header("Sliding Parameters")]
+    private Vector3 _hitPointNormal;
 
     [Header("Crouch")]
     [SerializeField] private float _crouchHeight = 0.4f;
@@ -229,5 +251,10 @@ public class PlayerStateMachine : MonoBehaviour
         float timeToApex = _maxJumpTime / 2;
         _jumpGravity = (-2 * _maxJumpHeight) / (timeToApex * timeToApex);
         _jumpVelocity = (2 * _maxJumpHeight) / timeToApex;
+    }
+    void SlideCheck()
+    {
+        if (isSliding)
+            MoveDirection += new Vector3(HitPointNormal.x, -HitPointNormal.y, HitPointNormal.z) * SlopeSlideSpeed;
     }
 }
