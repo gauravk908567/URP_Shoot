@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using Unity.Netcode;
 
-public class PlayerStateMachine : MonoBehaviour
+public class PlayerStateMachine : NetworkBehaviour
 {
     #region ControlSettingProperties
     public PlayerBaseState CurrentState { get => _currentState; set => _currentState = value; }
@@ -167,21 +168,35 @@ public class PlayerStateMachine : MonoBehaviour
     {
         _playerInput.PlayerControls.Enable();
     }
-
     private void OnDisable()
     {
         _playerInput.PlayerControls.Disable();
+    }
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        Initialize();
+        if (!IsOwner)
+        {
+            _playerCamera.enabled = false;
+            _playerInput.Disable();
+        }
+        else
+        {
+            _playerCamera.enabled = true;
+            _playerInput.Enable();
+        }
+    }
+
+    void Initialize()
+    {
+        _playerCamera = GetComponentInChildren<Camera>();
     }
     void Awake()
     {
         _playerInput = new Pl_Movement();
         _animator = GetComponent<Animator>();
         _characterController = GetComponent<CharacterController>();
-
-        if (_playerCamera == null)
-        {
-            _playerCamera = Camera.main;
-        }
 
         _states = new PlayerStateFactory(this);
         _currentState = _states.Grounded();
@@ -215,12 +230,16 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void Update()
     {
+        if (!Application.isFocused) return;
+
         handleMouseLook();
 
         _characterController.Move(_appliedMovement * Time.deltaTime);
         IsMovementPressed = CurrentMovementInput.x != 0 || CurrentMovementInput.y != 0;
 
         CurrentState.UpdateStates();
+
+        SlideCheck();
     }
 
     void onMovementInput(InputAction.CallbackContext context) => _currentMovementInput = context.ReadValue<Vector2>();
